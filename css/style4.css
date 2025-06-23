@@ -1,0 +1,25 @@
+body{
+	background:url('../images/sample_image2.jpg') no-repeat;
+	background-size:cover;
+	color:black;
+	padding-top:20px;
+}
+li{
+	width:150px;
+	height:40px;
+	background-color:black;
+	line-height:40px;
+	text-align:center;
+	list-style:none;
+	font-size:20px;
+	display:block;
+}
+ li a:hover{
+	background-color:darkred;
+}
+ li a{
+	text-decoration:none;
+	color:white;
+	display:block;
+}
+
