@@ -28,7 +28,7 @@ echo "Mobile Number = $mobnum<br/>";
 echo "City = $city<br/>";
 
 // Prepare query with parameter binding (safer)
-$stmt = $con->prepare("INSERT INTO badminton (F_NAME, L_NAME, Mobile, City) VALUES (?, ?, ?, ?)");
+$stmt = $con->prepare("INSERT INTO badminton_table (F_NAME, L_NAME, Mobile, City) VALUES (?, ?, ?, ?)");
 $stmt->bind_param("ssss", $fname, $lname, $mobnum, $city);
 
 if ($stmt->execute()) {
@@ -37,7 +37,7 @@ if ($stmt->execute()) {
     echo "<table align='center' border='2'>";
     echo "<tr><td>First Name</td><td>Last Name</td><td>Mobile Number</td><td>City</td><td>id</td></tr>";
     
-    $f = mysqli_query($con, "SELECT * FROM badminton");
+    $f = mysqli_query($con, "SELECT * FROM badminton_table");
     while ($row = mysqli_fetch_assoc($f)) {
         echo "<tr>";
         echo "<td><h1>{$row['F_NAME']}</h1></td>";
